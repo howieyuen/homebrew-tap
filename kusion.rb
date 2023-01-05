@@ -5,14 +5,14 @@
 class Kusion < Formula
   desc "Codify and deliver intentions to Kubernetes and Clouds"
   homepage "https://github.com/howieyuen/kusion"
-  version "0.7.3"
+  version "0.7.4"
   license "Apache License"
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/howieyuen/kusion/releases/download/v0.7.3/kusion_0.7.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "87f51761f2f667fa14b7559588d2f4f5dda67ac5acd06aab54d207b23370d968"
+      url "https://github.com/howieyuen/kusion/releases/download/v0.7.4/kusion_0.7.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5f763bb3eb9480821184e15cbeeceee65db8f83e8a704d87d6126c429c675eee"
 
       def install
         bin.install "kusion"
