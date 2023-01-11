@@ -12,7 +12,7 @@ class Kusion < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/howieyuen/kusion/releases/download/v0.7.6/kusion_0.7.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "c8b0ab6ecc8d00213324b3ede8afe0f6f71046c8a11edb1484684690aa3c0106"
+      sha256 "6263cdc391ebb18e62533eb59a0353673ae727c9f12111f99efe794f5582d3b9"
 
       def install
         bin.install "kusion"
