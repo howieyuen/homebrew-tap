@@ -5,19 +5,27 @@
 class Kusion < Formula
   desc "Codify and deliver intentions to Kubernetes and Clouds"
   homepage "https://github.com/howieyuen/kusion"
-  version "0.7.6"
+  version "0.7.4"
   license "Apache License"
-  depends_on :linux
 
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/howieyuen/kusion/releases/download/v0.7.6/kusion_0.7.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6263cdc391ebb18e62533eb59a0353673ae727c9f12111f99efe794f5582d3b9"
+  depends_on "kcl-lang/tap/kclvm"
+  depends_on :macos
 
-      depends_on "kcl-lang/tap/kclvm"
+  on_macos do
+    url "https://github.com/howieyuen/kusion/releases/download/v0.7.4/kusion_0.7.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+    sha256 "d22c374d52867d802381db1e60a0dd5075f705b5948062ade8b7f5e58bd8ecfb"
 
-      def install
-        bin.install "kusion"
+    def install
+      bin.install "kusion"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Kusion
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
