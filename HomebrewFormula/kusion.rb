@@ -14,6 +14,8 @@ class Kusion < Formula
       url "https://github.com/howieyuen/kusion/releases/download/v0.7.6/kusion_0.7.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
       sha256 "6263cdc391ebb18e62533eb59a0353673ae727c9f12111f99efe794f5582d3b9"
 
+      depends_on "kcl-lang/tap/kclvm"
+
       def install
         bin.install "kusion"
       end
