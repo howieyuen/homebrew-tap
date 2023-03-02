@@ -5,15 +5,14 @@
 class Kusion < Formula
   desc "Codify and deliver intentions to Kubernetes and Clouds"
   homepage "https://github.com/howieyuen/kusion"
-  version "0.7.4"
+  version "0.7.5"
   license "Apache License"
 
   depends_on "kcl-lang/tap/kclvm"
-  depends_on :macos
 
   on_macos do
-    url "https://github.com/howieyuen/kusion/releases/download/v0.7.4/kusion_0.7.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-    sha256 "d22c374d52867d802381db1e60a0dd5075f705b5948062ade8b7f5e58bd8ecfb"
+    url "https://github.com/howieyuen/kusion/releases/download/v0.7.5/kusion_0.7.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+    sha256 "4e97c3e534204a6f4472be7a51146492458888b660cd76d63d7687b80c0f31cd"
 
     def install
       bin.install "kusion"
@@ -26,6 +25,17 @@ class Kusion < Formula
           formula at this time. The darwin_amd64 binary may work in compatibility
           mode, but it might not be fully supported.
         EOS
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/howieyuen/kusion/releases/download/v0.7.5/kusion_0.7.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1778d9cb1065b8bedf4e7e63fa103fc01bc70a1c056865061ccb079d75a90309"
+
+      def install
+        bin.install "kusion"
       end
     end
   end
