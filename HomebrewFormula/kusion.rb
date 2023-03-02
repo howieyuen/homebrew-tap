@@ -12,7 +12,7 @@ class Kusion < Formula
 
   on_macos do
     url "https://github.com/howieyuen/kusion/releases/download/v0.7.5/kusion_0.7.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-    sha256 "4e97c3e534204a6f4472be7a51146492458888b660cd76d63d7687b80c0f31cd"
+    sha256 "f0bacd6320a227e8ac88166f5e5d8e9439d9e07d0359aeb8b1dcef99142d2ba8"
 
     def install
       bin.install "kusion"
@@ -32,7 +32,7 @@ class Kusion < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/howieyuen/kusion/releases/download/v0.7.5/kusion_0.7.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "1778d9cb1065b8bedf4e7e63fa103fc01bc70a1c056865061ccb079d75a90309"
+      sha256 "2d7963e8501564e399edf6ee39a52571c6de77418ea24ba87c09d5f7133d0038"
 
       def install
         bin.install "kusion"
