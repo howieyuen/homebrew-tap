@@ -5,14 +5,14 @@
 class Kusion < Formula
   desc "Codify and deliver intentions to Kubernetes and Clouds"
   homepage "https://github.com/howieyuen/kusion"
-  version "0.8.0-rc.1"
+  version "0.8.0-rc.2"
   license "Apache License"
 
-  depends_on "kcl-lang/tap/kclvm"
+  depends_on "kclvm"
 
   on_macos do
-    url "https://github.com/howieyuen/kusion/releases/download/v0.8.0-rc.1/kusion_0.8.0-rc.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-    sha256 "69a0cd18b59d13419160308cbefd4567430dcf25e4063d7af63cdf2b1fe7bb65"
+    url "https://github.com/howieyuen/kusion/releases/download/v0.8.0-rc.2/kusion_0.8.0-rc.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+    sha256 "b9bd928c7045116d92c2f6be870259d1b9a96c8299dd1f904aab08475eec8a02"
 
     def install
       bin.install "kusion"
@@ -31,8 +31,8 @@ class Kusion < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/howieyuen/kusion/releases/download/v0.8.0-rc.1/kusion_0.8.0-rc.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "32c8ee9051f92ab68843d8177037619bb5009d54d7ab998d61d4b3aa2d9da03a"
+      url "https://github.com/howieyuen/kusion/releases/download/v0.8.0-rc.2/kusion_0.8.0-rc.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "110b232981cc12588b80d70dbf8b75eb32ad1eacac00cae5e1cd5e4cc1917493"
 
       def install
         bin.install "kusion"
