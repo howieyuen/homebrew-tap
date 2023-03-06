@@ -14,8 +14,8 @@ brew install howieyuen/tap/kusion
 
 | Repository | Formula | Description |
 | ---------- | ------- | ----------- |
-| [kusion](https://github.com/howieyuen/kusionup) | [formula](HomebrewFormula/kusionup.rb) | Platform Engineering Engine: Deliver intentions to Kubernetes and Clouds |
-| [KCLVM](https://github.com/KusionStack/KCLVM) | [formula](Scoop/kclvm.json) | KCL: Constraint-based Record & Functional Language |
+| [kusion](https://github.com/howieyuen/kusionup) | [formula](HomebrewFormula/kusion.rb) | Platform Engineering Engine: Deliver intentions to Kubernetes and Clouds |
+| [KCLVM](https://github.com/KusionStack/KCLVM) | [formula](HomebrewFormula/kclvm.rb) | KCL: Constraint-based Record & Functional Language |
 
 ## Documentation
 
